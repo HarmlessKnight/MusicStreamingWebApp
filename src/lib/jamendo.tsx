@@ -1,4 +1,4 @@
-const JAMENDO_CLIENT_ID = "d26b98ea";
+
 const BASE_URL = "https://api.jamendo.com/v3.0";
 
 export type JamendoTrack = {
