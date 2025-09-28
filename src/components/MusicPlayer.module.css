@@ -1,0 +1,247 @@
+.container {
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.musicCard {
+  background-color: transparent;
+  padding: 32px;
+  border-radius: 8px;
+  width: 480px;
+  max-width: 90vw;
+}
+
+.albumCoverContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.albumCover {
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  opacity: 90%;
+}
+
+.songTitle {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px 0;
+  color: whitesmoke;
+  opacity: 80%;
+}
+
+.playlistName {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 90%;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.artistName {
+  color: whitesmoke;
+  font-size: 18px;
+  text-align: center;
+  margin: 4px 0 24px 0;
+  opacity: 60%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 28px;
+  margin-top: 28px;
+}
+
+.controlButton {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: white; 
+  font-size: 25px; 
+  position: relative; 
+}
+
+.controlButton:hover {
+  transform: scale(1.15); 
+}
+
+.controlButton:active {
+  transform: scale(0.95); 
+}
+
+.controlButton:disabled {
+  background-color: #9ca3af; 
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.controlButton:focus {
+  outline: none;
+  
+}
+
+.prevButton, .nextButton {
+  padding: 12px;
+  width: 48px;  
+  height: 40px; 
+  min-width: 48px; 
+  min-height: 48px; 
+  opacity: 95%;
+}
+
+.prevButton i,
+.nextButton i {
+  transform: scaleX(1.5); /* 1.5× wider */
+  display: inline-block;   /* ensure scaling works */
+}
+
+
+.playButton {
+  padding: 20px; 
+  width: 64px;   
+  height: 64px;  
+  min-width: 64px; 
+  min-height: 64px; 
+  font-size: 40px; 
+  opacity: 95%;
+}
+
+
+.controlButton i {
+  color: white !important; 
+  font-size: inherit;
+  position: relative; 
+  z-index: 2; 
+  line-height: 1; 
+  display: block; 
+}
+
+.controlButton .fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.buttonIcon {
+  color: #4b5563;
+}
+
+.prevIcon {
+  transform: scaleX(-1);
+}
+
+.progressContainer {
+  background-color: #b9b9b975;
+  height: 8px;
+  border-radius: 9999px;
+  overflow: hidden;
+  cursor: pointer; 
+}
+
+.progressContainer:hover {
+  height: 10px; 
+}
+
+.progressBar {
+  background-color: whitesmoke;
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.1s ease;
+  opacity: 60%;
+}
+
+.timeInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: whitesmoke;
+  opacity: 60%;
+}
+
+.loadingState {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loadingState h2 {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.loadingState p {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.loadingState button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.loadingState button:hover {
+  background-color: #4338ca;
+}
+.volumeContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.volumeSlider {
+  -webkit-appearance: none; 
+  -moz-appearance: none;    
+  appearance: none;          
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: #b9b9b983; 
+  opacity: 60%;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: whitesmoke;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: whitesmoke;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  
+}

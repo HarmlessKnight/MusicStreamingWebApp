@@ -1,0 +1,101 @@
+/* styles.module.css */
+.splitContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.split {
+  flex: 1;
+  transition: flex 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.left {
+  position: relative;
+  box-shadow: inset -8px 0 12px -8px rgba(255, 255, 255, 0.4);
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0) 80%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.right {
+  background: transparent;
+}
+
+.split:hover {
+  flex: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.glassText {
+  font-size: 3rem;
+  font-family: cursive;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  background: none;
+  margin-bottom: 10px; /* Add some space between text and icon */
+}
+
+.content h2 {
+  margin-bottom: 10px;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg);}
+}
+
+
+.radioIcon {
+  display: block;
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  margin-top: 15px; /* Add some space above the icon */
+}
+
+.radioIcon path {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.split:hover .radioIcon {
+  animation: shake 0.5s infinite;
+  transform: scale(1.1);
+}
+
+.split:hover .Streamingicon{
+  animation: shake 0.5s infinite;
+  transform: scale(1.1);
+}
