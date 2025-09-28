@@ -1,21 +1,21 @@
-Music Streaming & Player Web App
+# 🎵 Music Streaming & Player Web App
 
-Users can either:
+A **web-based music player** where users can enjoy music in two ways:
 
-Listen to Radio-Style Streams – continuous playback, just like a radio.
+- 📻 **Radio-Style Streams** – continuous playback, just like a radio  
+- 🎶 **On-Demand Mode** – browse available streams and select specific tracks  
 
-Pick Songs On-Demand – browse available streams and select specific tracks.
+### ✨ Features
+- On-demand mode with selectable songs  
+- Radio-like continuous playback  
+- Responsive design for desktop & mobile  
+- Powered by the **Jaspero Music API**  
 
-On-demand mode with selectable songs.
+---
 
-Responsive design for desktop & mobile.
+### 🛠️ Tech Stack
+- **Frontend:** [Next.js](https://nextjs.org/)  
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)  
+- **Music API:** [Jaspero API](https://jaspero.co/)  
 
-Powered by the Jaspero music API.
-
-🛠️ Tech Stack
-
-Frontend: Next.js
-
-Styling: Tailwind CSS
-
-Music API: Jaspero API
+---
