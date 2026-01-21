@@ -1,4 +1,4 @@
-
+const JAMENDO_CLIENT_ID = "d26b98ea";
 const BASE_URL = "https://api.jamendo.com/v3.0";
 
 export type JamendoTrack = {
@@ -101,12 +101,31 @@ export async function getTracks(
 }
 
 
-
-
 export async function getTrackById(id: number): Promise<JamendoTrack[]> {
   const data = await fetchFromJamendo<JamendoTrack>("tracks/", { id });
   console.log("getTrackById returned:", data);
   return data;
+}
+
+export async function getTracksByGenre(
+  genre: string,
+  limit = 10,
+  offset = 0
+): Promise<Song[]> {
+  const data = await fetchFromJamendo<JamendoTrack>("tracks/", {
+    fuzzytags: genre,          
+    limit,
+    offset,
+    type: "single albumtrack", 
+    groupby: "artist_id",      
+    boost: "popularity_total", 
+    audioformat: "mp31",
+  });
+
+  console.log(`getTracksByGenre(${genre}) returned:`, data);
+
+  
+  return data.map(mapToSong);
 }
 
 // ------------------ ALBUMS ------------------

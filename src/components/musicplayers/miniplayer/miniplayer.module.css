@@ -1,0 +1,301 @@
+.container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.musicCard {
+  width: 600px;
+  max-width: 90vw;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.volumeWrapper{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  padding-top: 35px;
+  padding-left: 15px;
+
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.songInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  
+}
+
+.artistName {
+  color: whitesmoke;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  opacity: 50%;
+  font-weight: 400;
+  
+}
+
+.songTitle {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  color: whitesmoke;
+  opacity: 95%;
+  line-height: 1.3;
+  
+}
+
+.playlistName {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 90%;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+.volumeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.volumeSlider {
+  -webkit-appearance: none; 
+  width: 120px; 
+  height: 4px; 
+  background: #b9b9b983; 
+  border-radius: 4px;
+  outline: none;
+  accent-color: rgba(255, 255, 255, 1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+}
+
+.volumeSlider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 4px;
+  background: #b9b9b983; 
+}
+
+.volumeSlider:hover {
+  opacity: 80%;
+}
+
+.volumeWrapper:hover .volumeSlider {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.volumeWrapper i.fa-solid {
+  color: rgba(255, 255, 255, 0.808); 
+  transition: color 0.3s ease;
+}
+
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: whitesmoke; 
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-top: -4px; 
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: whitesmoke;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: none;
+}
+
+.volumeSlider::-moz-range-progress {
+  background-color: whitesmoke;
+}
+
+.volumeSlider::-moz-range-track {
+  background-color: #b9b9b983;
+  border-radius: 4px;
+}
+
+.progressContainer {
+  background-color: #b9b9b975;
+  height: 7px;
+  border-radius: 9999px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.2s ease;
+  width: 100%;
+}
+
+.progressContainer:hover {
+  height: 10px;
+}
+
+.progressBar {
+  background-color: whitesmoke;
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.1s ease;
+  opacity: 70%;
+}
+
+.timeInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: whitesmoke;
+  opacity: 50%;
+  
+  font-weight: 500;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  
+}
+
+.controlButton {
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: white; 
+  font-size: 18px; 
+  position: relative;
+  flex-shrink: 0;
+}
+
+.controlButton:hover {
+  transform: scale(1.1); 
+  opacity: 1 !important;
+}
+
+.controlButton:active {
+  transform: scale(0.95); 
+}
+
+.controlButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.3 !important;
+}
+
+.controlButton:disabled:hover {
+  transform: scale(1);
+}
+
+.controlButton:focus {
+  outline: none;
+}
+
+.prevButton, .nextButton {
+  padding: 8px;
+  width: 18px;  
+  height: 18px; 
+  opacity: 70%;
+}
+
+.prevButton i,
+.nextButton i {
+  transform: scaleX(1.3);
+  display: inline-block;
+}
+
+.playButton {
+  padding: 12px; 
+  width: 12px;   
+  height: 12px;  
+  font-size: 24px; 
+  opacity: 95%;
+}
+
+.controlButton i {
+  color: white !important; 
+  font-size: inherit;
+  position: relative; 
+  z-index: 2; 
+  line-height: 1; 
+  display: block; 
+}
+
+.controlButton .fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.buttonIcon {
+  color: #4b5563;
+}
+
+.prevIcon {
+  transform: scaleX(-1);
+}
+
+.loadingState {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loadingState h2 {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  opacity: 90%;
+}
+
+.loadingState p {
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
+  opacity: 60%;
+}
+
+.loadingState button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.loadingState button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

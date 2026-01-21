@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
-import MusicPlayer from "@/components/music_player_card";
+import MusicPlayer from "@/components/musicplayers/music_player_card";
 import { JamendoPlaylist, getTracks, getPlayablePlaylists } from "@/lib/jamendo";
 import styles from "./styles.module.css";
 import AlbumGradient from "@/components/Gradients/AlbumGradient";
